@@ -18,7 +18,7 @@ const items = [
   },
   {
     title: "Konfidencialu",
-    description: "Rašyk drąsiai – be viešinimo, tik tiesiai į mūsų Slack.",
+    description: "Rašyk drąsiai – be viešinimo, tik tau ir tavo situacijai.",
     icon: ShieldCheck
   }
 ];

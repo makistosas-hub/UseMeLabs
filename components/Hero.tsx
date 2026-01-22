@@ -18,8 +18,8 @@ export default function Hero() {
             Teisės draugas – kai teisininkas per brangus, o tylėti per skaudu.
           </h1>
           <p className="mt-5 max-w-xl text-base text-slate-300 sm:text-lg">
-            Per kelias minutes paruošk pretenziją, sutartį ar aiškų laišką. Rašai čia – žinutės
-            keliauja į mūsų Slack, kad galėtume padėti sudėlioti tekstą.
+            Per kelias minutes paruošk pretenziją, sutartį ar aiškų laišką. Parašyk situaciją ir
+            gauk aiškų, praktišką tekstą.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link

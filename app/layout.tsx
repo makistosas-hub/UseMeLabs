@@ -15,11 +15,11 @@ export const metadata: Metadata = {
     template: "%s | Teisės draugas"
   },
   description:
-    "Per kelias minutes paruošk pretenziją, sutartį ar aiškų laišką su AI pagalba. Rašai čia – žinutės keliauja į Slack.",
+    "Per kelias minutes paruošk pretenziją, sutartį ar aiškų laišką su AI pagalba. Parašyk situaciją ir gauk aiškų tekstą.",
   openGraph: {
     title: "Teisės draugas – AI legal assistant",
     description:
-      "Per kelias minutes paruošk pretenziją, sutartį ar aiškų laišką. Rašai čia – žinutės keliauja į Slack.",
+      "Per kelias minutes paruošk pretenziją, sutartį ar aiškų laišką. Parašyk situaciją ir gauk aiškų tekstą.",
     url: "/",
     siteName: "Teisės draugas",
     locale: "lt_LT",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Teisės draugas – AI legal assistant",
     description:
-      "Per kelias minutes paruošk pretenziją, sutartį ar aiškų laišką. Rašai čia – žinutės keliauja į Slack.",
+      "Per kelias minutes paruošk pretenziją, sutartį ar aiškų laišką. Parašyk situaciją ir gauk aiškų tekstą.",
     images: ["/og.svg"]
   },
   icons: {

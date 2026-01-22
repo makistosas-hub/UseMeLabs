@@ -12,8 +12,8 @@ export default function PrivacyPage() {
       </Link>
       <h1 className="mt-6 text-3xl font-semibold text-white">Privatumo politika</h1>
       <p className="mt-4 text-base text-slate-300">
-        Teisės draugas renka tik tiek informacijos, kiek pateikiate patys per Chatlio pokalbį.
-        Žinutės keliauja į mūsų Slack kanalą ir naudojamos tik tekstų parengimui.
+        Teisės draugas renka tik tiek informacijos, kiek pateikiate patys per pokalbį.
+        Žinutės naudojamos tik atsakymui parengti ir paslaugai tobulinti.
       </p>
       <p className="mt-4 text-base text-slate-300">
         Nesiųskite asmens kodo, kortelių duomenų ar sveikatos informacijos. Jei norite, galite

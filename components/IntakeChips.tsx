@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { logEvent } from "@/lib/analytics";
 import { buildTemplate, TemplateKey, templateLabels } from "@/lib/templates";
-import { openChatlio, setChatlioMessage } from "@/lib/chatlio";
 
 const chipOrder: TemplateKey[] = ["pretenzija", "sutartis", "ivertinimas", "skola"];
 
@@ -14,18 +13,11 @@ export default function IntakeChips() {
     logEvent("intake_chip_clicked", { key });
 
     const template = buildTemplate(key, window.location.pathname);
-    const setOk = setChatlioMessage(template);
-
-    if (setOk) {
-      logEvent("chat_opened", { source: "template", key });
-      return;
-    }
-
     const copied = await copyToClipboard(template);
+
     if (copied) {
       logEvent("template_copied", { key });
-      showToast("Šablonas nukopijuotas – įklijuok į chatą.");
-      openChatlio();
+      showToast("Šablonas nukopijuotas – įklijuok į pokalbį.");
       return;
     }
 

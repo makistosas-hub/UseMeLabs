@@ -12,8 +12,8 @@ const points = [
     icon: UserCheck
   },
   {
-    title: "Konfidencialumas",
-    description: "Žinutės keliauja tik į mūsų Slack kanalą per Chatlio.",
+    title: "Atsakingas naudojimas",
+    description: "Žinutės naudojamos tik atsakymui parengti ir kokybei gerinti.",
     icon: Lock
   }
 ];
