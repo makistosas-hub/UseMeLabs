@@ -15,16 +15,12 @@ Production-ready, local-first landing page for a Lithuanian AI legal assistant.
 4. `npm run dev`
 5. Open `http://localhost:3000`
 
-## Elfsight AI Chatbot
-The Elfsight widget is loaded globally from `components/ElfsightEmbed.tsx`.
-To change the widget, update the class name:
-
-```tsx
-<div className="elfsight-app-86283f0d-1a93-4c49-9651-c933fc5a17e5" data-elfsight-app-lazy />
-```
+## Landbot chatbot
+The Landbot widget is loaded globally from `components/LandbotEmbed.tsx`.
+To change the bot, update the `configUrl` inside that component.
 
 ## Common local issues & fixes
-- **Widget not appearing:** make sure `https://elfsightcdn.com/platform.js` is not blocked.
+- **Widget not appearing:** make sure `https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs` is not blocked.
 - **Clipboard blocked in some browsers:** click the chip again or manually copy from the toast text.
 
 ## How to test intake templates end-to-end

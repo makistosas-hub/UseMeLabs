@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import DevBanner from "@/components/DevBanner";
-import ElfsightEmbed from "@/components/ElfsightEmbed";
+import LandbotEmbed from "@/components/LandbotEmbed";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
@@ -44,7 +44,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.className} text-slate-100 antialiased`}>
         <DevBanner />
         {children}
-        <ElfsightEmbed />
+        <LandbotEmbed />
       </body>
     </html>
   );
