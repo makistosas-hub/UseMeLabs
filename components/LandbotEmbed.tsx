@@ -6,6 +6,12 @@ const scriptSrc = "https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs";
 const configUrl =
   "https://storage.googleapis.com/landbot.online/v3/H-3308356-PJ1JFVQROP9HO902/index.json";
 
+type LandbotWindow = typeof window & {
+  Landbot?: {
+    Livechat: new (config: { configUrl: string }) => unknown;
+  };
+};
+
 export default function LandbotEmbed() {
   useEffect(() => {
     let landbotInitialized = false;
@@ -33,11 +39,12 @@ export default function LandbotEmbed() {
           return;
         }
 
-        landbotInstance = new (window as typeof window & {
-          Landbot?: {
-            Livechat: new (config: { configUrl: string }) => unknown;
-          };
-        }).Landbot?.Livechat({
+        const LandbotCtor = (window as LandbotWindow).Landbot?.Livechat;
+        if (!LandbotCtor) {
+          return;
+        }
+
+        landbotInstance = new LandbotCtor({
           configUrl
         });
       });
