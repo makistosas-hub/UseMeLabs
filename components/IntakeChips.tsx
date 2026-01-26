@@ -5,7 +5,17 @@ import { logEvent } from "@/lib/analytics";
 import { buildTemplate, TemplateKey, templateLabels } from "@/lib/templates";
 import { openLandbot } from "@/lib/landbot";
 
-const chipOrder: TemplateKey[] = ["pretenzija", "sutartis", "ivertinimas", "skola"];
+const chipOrder: TemplateKey[] = [
+  "pretenzija",
+  "atsakymas",
+  "sutartis",
+  "ivertinimas",
+  "skola",
+  "priminsimas",
+  "nutraukimas",
+  "sutikimas",
+  "reikalavimas"
+];
 
 export default function IntakeChips() {
   const [toast, setToast] = useState<string | null>(null);

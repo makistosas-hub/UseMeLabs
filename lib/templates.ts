@@ -1,10 +1,24 @@
-export type TemplateKey = "pretenzija" | "sutartis" | "ivertinimas" | "skola";
+export type TemplateKey =
+  | "pretenzija"
+  | "atsakymas"
+  | "sutartis"
+  | "ivertinimas"
+  | "skola"
+  | "priminsimas"
+  | "nutraukimas"
+  | "sutikimas"
+  | "reikalavimas";
 
 export const templateLabels: Record<TemplateKey, string> = {
   pretenzija: "Pretenzija",
+  atsakymas: "Atsakymas į pretenziją",
   sutartis: "Sutarties juodraštis",
   ivertinimas: "Situacijos įvertinimas",
-  skola: "Skolos priminimas"
+  skola: "Skolos priminimas",
+  priminsimas: "Antras priminimas",
+  nutraukimas: "Sutarties nutraukimas",
+  sutikimas: "Sutikimas / patvirtinimas",
+  reikalavimas: "Reikalavimas atlyginti žalą"
 };
 
 const templates: Record<TemplateKey, string> = {
@@ -17,6 +31,14 @@ Suma (€) ir ko reikalaujate
 Įrodymai (kokius turite: chat, sutartis, pavedimas, nuotraukos)
 Ko norite kaip rezultato (grąžinti pinigus, pakeisti prekę, atlyginti žalą ir pan.)
 Terminas atsakymui (pvz., 7/14 dienų)`,
+  atsakymas: `[TD:ATSAKYMAS]
+Kam atsakote? (pretenzijos data / numeris)
+Kas jūs esate? (fizinis/juridinis, vardas/pavadinimas)
+Situacijos santrauka (3–7 sakiniai)
+Jūsų pozicija (sutinkate / dalinai / nesutinkate)
+Argumentai ir faktai
+Siūlomas sprendimas
+Terminas atsakymui / susitarimui`,
   sutartis: `[TD:SUTARTIS]
 Sutarties tipas (nuoma / paslaugos / pirkimas-pardavimas / kita)
 Šalys (vardai/pavadinimai)
@@ -38,7 +60,34 @@ Skolos suma
 Skolos pagrindas (sąskaita, sutartis, žodinis susitarimas)
 Terminas iki kada turėjo sumokėti
 Ar jau priminta? (taip/ne)
-Koks tonas? (neutralus / griežtesnis)`
+Koks tonas? (neutralus / griežtesnis)`,
+  priminsimas: `[TD:PRIMINIMAS]
+Kam primenama? (vardas/pavadinimas)
+Skolos suma / įsipareigojimas
+Pagrindas (sąskaita, sutartis, susitarimas)
+Terminas iki kada turėjo būti įvykdyta
+Koks tonas? (neutralus / griežtesnis)
+Ką siūlote kaip sprendimą`,
+  nutraukimas: `[TD:NUTRAUKIMAS]
+Sutarties tipas
+Šalys
+Nutraukimo pagrindas
+Svarbios datos / terminai
+Ką siūlote (nutraukimo data, atsiskaitymas)
+Papildomos sąlygos`,
+  sutikimas: `[TD:SUTIKIMAS]
+Kokiam veiksmui reikia sutikimo?
+Šalys
+Svarbios sąlygos
+Terminas / galiojimas
+Papildoma informacija`,
+  reikalavimas: `[TD:REIKALAVIMAS]
+Kas nutiko? (situacijos santrauka)
+Žalos suma / pobūdis
+Pagrindas (sutartis, teisės aktas)
+Įrodymai
+Ką reikalaujate
+Terminas atsakymui`
 };
 
 const sessionKey = "td_session_id";

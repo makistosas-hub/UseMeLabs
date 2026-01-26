@@ -24,13 +24,6 @@ export default function ChatPanel() {
         </button>
       </div>
 
-      <div className="mt-6 rounded-2xl border border-white/10 bg-slate-950/60 p-5 text-sm text-slate-300">
-        Atidaryk AI pokalbį ir parašyk situaciją.
-        <span className="mt-2 block text-xs text-slate-400">
-          Šablonai žemiau nukopijuoja struktūrą į iškarpinę – įklijuok į pokalbį.
-        </span>
-      </div>
-
       <div className="mt-5 flex flex-col gap-3 text-sm text-slate-300">
         <IntakeChips />
       </div>
