@@ -1,6 +1,7 @@
 "use client";
 
 import IntakeChips from "@/components/IntakeChips";
+import { openLandbot } from "@/lib/landbot";
 
 export default function ChatPanel() {
   return (
@@ -15,13 +16,16 @@ export default function ChatPanel() {
           </p>
           <h3 className="mt-2 text-xl font-semibold text-white">Pradėk pokalbį dabar</h3>
         </div>
-        <span className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-slate-200">
-          Pokalbio langas – apačioje dešinėje
-        </span>
+        <button
+          onClick={() => openLandbot()}
+          className="rounded-full bg-teal-300/90 px-5 py-2 text-xs font-semibold text-slate-900 shadow-glow transition hover:bg-teal-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-200/80"
+        >
+          Atidaryti pokalbį
+        </button>
       </div>
 
       <div className="mt-6 rounded-2xl border border-white/10 bg-slate-950/60 p-5 text-sm text-slate-300">
-        Atidaryk AI pokalbį ekrano apačioje dešinėje ir parašyk situaciją.
+        Atidaryk AI pokalbį ir parašyk situaciją.
         <span className="mt-2 block text-xs text-slate-400">
           Šablonai žemiau nukopijuoja struktūrą į iškarpinę – įklijuok į pokalbį.
         </span>

@@ -1,5 +1,8 @@
+"use client";
+
 import ChatPanel from "@/components/ChatPanel";
 import Link from "next/link";
+import { openLandbot } from "@/lib/landbot";
 
 const badges = [
   "Be teismo",
@@ -22,12 +25,15 @@ export default function Hero() {
             gauk aiškų, praktišką tekstą.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              href="#chat-panel"
+            <button
+              onClick={() => {
+                openLandbot();
+                document.getElementById("chat-panel")?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="inline-flex items-center justify-center rounded-full bg-teal-300 px-6 py-3 text-sm font-semibold text-slate-900 shadow-glow transition hover:bg-teal-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-200/80"
             >
               Pradėti pokalbį
-            </Link>
+            </button>
             <Link
               href="#kaip-veikia"
               className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:border-teal-200/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-200/80"

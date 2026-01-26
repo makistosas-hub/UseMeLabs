@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { logEvent } from "@/lib/analytics";
 import { buildTemplate, TemplateKey, templateLabels } from "@/lib/templates";
+import { openLandbot } from "@/lib/landbot";
 
 const chipOrder: TemplateKey[] = ["pretenzija", "sutartis", "ivertinimas", "skola"];
 
@@ -13,8 +14,10 @@ export default function IntakeChips() {
     logEvent("intake_chip_clicked", { key });
 
     const template = buildTemplate(key, window.location.pathname);
-    const copied = await copyToClipboard(template);
 
+    openLandbot(`Noriu ${templateLabels[key].toLowerCase()}.\n\n${template}`);
+
+    const copied = await copyToClipboard(template);
     if (copied) {
       logEvent("template_copied", { key });
       showToast("Šablonas nukopijuotas – įklijuok į pokalbį.");
