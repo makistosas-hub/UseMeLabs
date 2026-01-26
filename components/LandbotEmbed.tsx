@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 const scriptSrc = "https://cdn.landbot.io/landbot-3/landbot-3.0.0.mjs";
 const configUrl =
-  "https://storage.googleapis.com/landbot.online/v3/H-3308356-PJ1JFVQROP9HO902/index.json";
+  "https://storage.googleapis.com/landbot.online/v3/H-3310408-7KNUOJQEPTWMIYN9/index.json";
 
 type LandbotWindow = typeof window & {
   Landbot?: {
