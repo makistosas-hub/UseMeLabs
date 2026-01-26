@@ -14,8 +14,9 @@ export default function IntakeChips() {
     logEvent("intake_chip_clicked", { key });
 
     const template = buildTemplate(key, window.location.pathname);
+    const shortMessage = `Noriu ${templateLabels[key].toLowerCase()}.`;
 
-    openLandbot(`Noriu ${templateLabels[key].toLowerCase()}.\n\n${template}`);
+    openLandbot(shortMessage);
 
     const copied = await copyToClipboard(template);
     if (copied) {
